@@ -13,16 +13,6 @@ def browser(module_browser, base_url):
     time.sleep(3)
     return module_browser
 
-# def element_present(browser, element, message):
-#     e = browser.find_many(xpath=element)
-#     assert len(e)!=0, message
-
-# def test_h1_present(browser):
-#     element_present(browser, '//h1', "There should be atleast one h1 in page")
-
-# def test_h2_present(browser):
-#     element_present(browser, '//h2', "There should be atleast one h2 in page")
-
 def test_h1_text(browser):
     e = browser.find(xpath='//h1')
     assert e.text == "Free Expense Report Templates", "h1 text is not matching"
